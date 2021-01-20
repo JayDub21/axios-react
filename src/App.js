@@ -40,7 +40,7 @@ class App extends Component {
     this.setState({ posts });
 
     try {
-      await http.delete(`s${config.apiEndpoint}/${post.id}`);
+      await http.delete(`${config.apiEndpoint}/${post.id}`);
       toast('Post Deleted!');
     } catch (ex) {
       if (ex.response && ex.response.status === 404)
